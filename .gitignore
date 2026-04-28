@@ -1,0 +1,10 @@
+.DS_Store
+.idea/
+.vscode/
+
+bin/
+dist/
+coverage.out
+
+.venv*/
+sample_click_order.png

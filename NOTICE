@@ -1,0 +1,22 @@
+ddddocr-go
+==========
+
+This project is a Go SDK/CLI implementation based on and referencing the
+original ddddocr project:
+
+  https://github.com/sml2h3/ddddocr
+
+The original ddddocr project is a Python SDK for offline CAPTCHA OCR and
+related CAPTCHA recognition tasks. It was developed by sml2h3 and kerlomz and
+is distributed under the MIT License.
+
+This repository includes or adapts model assets, charset data, algorithmic
+behavior, and API concepts from the original project. The Go implementation,
+SDK wrapper, CLI packaging, and click-captcha ordering logic in this repository
+are maintained by okatu-loli.
+
+Upstream project:
+
+  Repository: https://github.com/sml2h3/ddddocr
+  License: MIT
+
