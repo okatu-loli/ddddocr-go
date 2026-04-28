@@ -135,9 +135,8 @@ Main methods:
 
 1. Run `go test ./...`.
 2. Commit all files.
-3. Push to GitHub and tag a release:
+3. Push to GitHub. CI builds the project on each branch push. When the default branch build passes, CI automatically creates and pushes the next `vX.Y.Z` tag by incrementing the patch version.
 
 ```bash
-git tag v0.1.0
-git push origin main --tags
+git push origin main
 ```

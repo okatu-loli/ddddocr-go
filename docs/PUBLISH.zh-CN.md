@@ -57,20 +57,22 @@ git remote set-url origin git@github.com:okatu-loli/ddddocr-go.git
 git push -u origin main
 ```
 
-## 5. 打 tag
+## 5. 自动打 tag
 
-Go module 推荐使用语义化版本：
+推送到默认分支后，GitHub Actions 会自动执行：
+
+- `go test ./...`
+- `go build ./...`
+- 构建通过后读取现有最高 `vX.Y.Z` tag，并递增 patch 版本
+- 创建并推送新的 annotated tag
+
+例如当前最高 tag 是 `v0.1.0`，默认分支构建通过后会自动创建 `v0.1.1`。
+
+发布后用户可以按对应 tag 安装：
 
 ```bash
-git tag v0.1.0
-git push origin v0.1.0
-```
-
-发布后用户可以安装：
-
-```bash
-go get github.com/okatu-loli/ddddocr-go@v0.1.0
-go install github.com/okatu-loli/ddddocr-go/cmd/ddddocr-go@v0.1.0
+go get github.com/okatu-loli/ddddocr-go@v0.1.1
+go install github.com/okatu-loli/ddddocr-go/cmd/ddddocr-go@v0.1.1
 ```
 
 ## 6. 发布前检查清单
